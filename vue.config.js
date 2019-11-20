@@ -1,5 +1,9 @@
+// module.exports = {
+//     publicPath: process.env.NODE_ENV === 'production'
+//       ? '/pwa-vue/dist/'
+//       : '/'
+//   }
+
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-      ? 'pwa-vue/dist/'
-      : ''
-  }
+    baseUrl: 'pwa-vue/dist/'
+}
