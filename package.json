@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "predeploy": "npm run build"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.3.2",
