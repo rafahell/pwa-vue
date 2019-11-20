@@ -5,5 +5,5 @@
 //   }
 
 module.exports = {
-    publicPath: 'dist/'
+    publicPath: 'pwa-vue/dist/'
 }
