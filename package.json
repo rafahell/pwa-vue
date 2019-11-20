@@ -5,8 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.3.2",
@@ -26,5 +25,5 @@
     "typescript": "~3.5.3",
     "vue-template-compiler": "^2.6.10"
   },
-  "homepage": "http://rafahell.github.io/pwa-ng/dist"
+  "homepage": "http://rafahell.github.io/pwa-vue"
 }
