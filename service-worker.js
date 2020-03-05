@@ -17,7 +17,7 @@ importScripts(
   "precache-manifest.e9145ed1b1360bc7849f63f189b41f37.js"
 );
 
-workbox.core.setCacheNameDetails({ prefix: "vue-power" });
+workbox.core.setCacheNameDetails({prefix: "vue-power"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
