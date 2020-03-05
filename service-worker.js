@@ -25,20 +25,6 @@ self.addEventListener('message', (event) => {
   }
 });
 
-navigator.serviceWorker.register('/firebase-messaging-sw.js')
-  .then(function (registration) {
-    var serviceWorker;
-    if (registration.installing) {
-      serviceWorker = registration.installing;
-    } else if (registration.waiting) {
-      serviceWorker = registration.waiting;
-    } else if (registration.active) {
-      serviceWorker = registration.active;
-    }
-
-  }).catch(function (err) {
-    console.log('ServiceWorker registration failed: ', err);
-  });
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
