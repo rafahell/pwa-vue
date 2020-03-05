@@ -17,13 +17,28 @@ importScripts(
   "precache-manifest.e9145ed1b1360bc7849f63f189b41f37.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "vue-power"});
+workbox.core.setCacheNameDetails({ prefix: "vue-power" });
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
 });
+
+navigator.serviceWorker.register('/firebase-messaging-sw.js')
+  .then(function (registration) {
+    var serviceWorker;
+    if (registration.installing) {
+      serviceWorker = registration.installing;
+    } else if (registration.waiting) {
+      serviceWorker = registration.waiting;
+    } else if (registration.active) {
+      serviceWorker = registration.active;
+    }
+
+  }).catch(function (err) {
+    console.log('ServiceWorker registration failed: ', err);
+  });
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
