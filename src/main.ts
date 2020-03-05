@@ -12,7 +12,7 @@ import 'firebase/functions';   // for cloud functions
 
 Vue.config.productionTip = false
 
-var config = {
+const firebaseConfig = {
   apiKey: "AIzaSyCN5X8khGMI4p8jnEmVtbG4eXln-7GX_p8",
   authDomain: "push-notification-a4e21.firebaseapp.com",
   databaseURL: "https://push-notification-a4e21.firebaseio.com",
@@ -23,7 +23,7 @@ var config = {
   measurementId: "G-VTS9G68SVG"
 };
 // 4. Get Firebase Configuration
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
 
@@ -35,13 +35,11 @@ messaging.requestPermission().then(() => {
 
   // Get Token
   messaging.getToken().then((token) => {
-    console.log(token)
+    console.log("token", token)
   })
 }).catch((err) => {
   console.log('Unable to get permission to notify.', err);
 });
-
-
 
 
 new Vue({
